@@ -56,16 +56,6 @@ pytest_profesional/
 
 🧪 Tests – Consumen únicamente fixtures y mocks, asegurando aislamiento total.
 
-🏃‍♂️ Ejecutar tests
-# Activar entorno virtual
-source .venv/bin/activate  # Linux / macOS
-.venv\Scripts\activate     # Windows
-
-# Instalar dependencias
-pip install -r requirements.txt
-
-# Ejecutar tests
-pytest -v --tb=short --maxfail=5 --disable-warnings --cov=apps --cov-report=term-missing
 
 🎯 Profesionalismo
 
