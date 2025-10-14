@@ -29,9 +29,10 @@ Faker → FactoryBoy → Fixtures → Mocks → Tests
 
 👥 Ready for teams and complex projects.
 
+## 🗂 Project Structure
 ```text
-pytest_profesional/                 <- Root del proyecto
-├── .venv/                          <- Entorno virtual
+pytest_profesional/                 <- Project root
+├── .venv/                          <- Virtual environment
 ├── pytest_profesional/
 │   ├── __init__.py
 │   ├── settings.py
@@ -40,47 +41,56 @@ pytest_profesional/                 <- Root del proyecto
 ├── apps/
 │   ├── usuario/
 │   │   ├── __init__.py
-│   │   ├── models.py             <- Modelo Usuario
-│   │   ├── context_manager.py    <- UsuarioContextManager
-│   │   ├── serializers.py        <- UsuarioSerializer
-│   │   ├── views.py              <- Vistas CRUD de Usuario
+│   │   ├── models.py             <- User model
+│   │   ├── context_manager.py    <- UserContextManager
+│   │   ├── serializers.py        <- UserSerializer
+│   │   ├── views.py              <- User CRUD views
 │   │   └── urls.py
 │   ├── libro/
 │   │   ├── __init__.py
-│   │   ├── models.py             <- Modelo Libro
-│   │   ├── context_manager.py    <- LibroContextManager
-│   │   ├── serializers.py        <- LibroSerializer
-│   │   ├── views.py              <- Vistas CRUD de Libro
+│   │   ├── models.py             <- Book model
+│   │   ├── context_manager.py    <- BookContextManager
+│   │   ├── serializers.py        <- BookSerializer
+│   │   ├── views.py              <- Book CRUD views
 │   │   └── urls.py
 │   └── biblioteca/
 │       ├── __init__.py
-│       ├── models.py             <- Modelo Biblioteca
-│       ├── context_manager.py    <- BibliotecaContextManager
-│       ├── serializers.py        <- BibliotecaSerializer
-│       ├── views.py              <- Vistas CRUD Biblioteca
+│       ├── models.py             <- Library model
+│       ├── context_manager.py    <- LibraryContextManager
+│       ├── serializers.py        <- LibrarySerializer
+│       ├── views.py              <- Library CRUD views
 │       └── urls.py
 ├── tests/
-│   ├── conftest.py               <- Fixtures globales, Faker, FactoryBoy
-│   ├── factories/
-│   │   ├── usuario_factory.py    <- FactoryUsuario
-│   │   ├── libro_factory.py      <- FactoryLibro
-│   │   └── biblioteca_factory.py <- FactoryBiblioteca
-│   ├── fixtures/
+│   ├── conftest.py               <- Global fixtures, Faker, FactoryBoy, Mocks
+│   ├── factories/                <- FactoryBoy for models
+│   │   ├── usuario_factory.py
+│   │   ├── libro_factory.py
+│   │   └── biblioteca_factory.py
+│   ├── fixtures/                 <- Reusable test data
 │   │   ├── usuario_fixtures.py
 │   │   ├── libro_fixtures.py
 │   │   └── biblioteca_fixtures.py
-│   ├── test_apps/
+│   ├── mocks/                     <- Reusable mocks for services/dependencies
+│   │   ├── usuario_mock.py
+│   │   ├── libro_mock.py
+│   │   └── biblioteca_mock.py
+│   ├── test_apps/                <- Unit tests for models and logic
 │   │   ├── test_usuario.py
 │   │   ├── test_libro.py
 │   │   └── test_biblioteca.py
-│   ├── test_serializers/
+│   ├── test_serializers/         <- Serializer tests
 │   │   ├── test_usuario_serializer.py
 │   │   ├── test_libro_serializer.py
 │   │   └── test_biblioteca_serializer.py
-│   └── test_views/
-│       ├── test_usuario_view.py
-│       ├── test_libro_view.py
-│       └── test_biblioteca_view.py
+│   ├── test_views/               <- Views and endpoint tests
+│   │   ├── test_usuario_view.py
+│   │   ├── test_libro_view.py
+│   │   └── test_biblioteca_view.py
+│   └── reports/                  <- Test and coverage reports
+│       ├── coverage.xml
+│       ├── htmlcov/
+│       │   └── index.html
+│       └── pytest_report.log
 ├── manage.py
 └── requirements.txt
 
