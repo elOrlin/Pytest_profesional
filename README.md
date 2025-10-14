@@ -1,33 +1,33 @@
 # Pytest_profesional
 Good Testing Practices(Pytest)
 
-📄 Descripción
+📄 Description
 
-Pytest Profesional es un proyecto Django con testing avanzado y arquitectura modular.
-El entorno es aislado, reproducible y escalable, siguiendo estándares enterprise, ideal para proyectos complejos y colaboración en equipo.
+Pytest Profesional is a Django project with advanced testing and modular architecture.
+The environment is isolated, reproducible, and scalable, following enterprise standards, ideal for complex projects and team collaboration.
 
-✨ Este proyecto demuestra buenas prácticas, calidad de tests y capacidad de liderazgo técnico.
+✨ This project demonstrates best practices, test quality, and technical leadership skills.
 
-🌟 Características
+🌟 Features
 
 🏗 Modular: apps usuario, libro, biblioteca.
 
-🧪 Tests organizados por tipo:
+🧪 Tests organized by type:
 
-test_apps/ → lógica de modelos y métodos.
+test_apps/ → model logic and methods.
 
-test_serializers/ → pruebas de serializers.
+test_serializers/ → serializer tests.
 
-test_views/ → pruebas de endpoints y vistas.
+test_views/ → endpoint and view tests.
 
-🔄 Flujo de testing profesional:
+🔄 Professional testing workflow:
 
 Faker → FactoryBoy → Fixtures → Mocks → Tests
 
 
-✅ Tests aislados y reproducibles, sin depender de datos duros.
+✅ Isolated and reproducible tests, no hard-coded data.
 
-👥 Preparado para equipos y proyectos complejos.
+👥 Ready for teams and complex projects.
 
 ```text
 pytest_profesional/                 <- Root del proyecto
@@ -84,23 +84,22 @@ pytest_profesional/                 <- Root del proyecto
 ├── manage.py
 └── requirements.txt
 
-⚡ Flujo de Testing Profesional
+⚡ Professional Testing Workflow
 
-🎲 Faker global – Datos realistas con proveedores personalizados.
+🎲 Global Faker – Realistic data with custom providers.
 
-🏭 FactoryBoy – Instancias controladas de modelos.
+🏭 FactoryBoy – Controlled model instances.
 
-🧩 Fixtures – Datos reutilizables para tests.
+🧩 Fixtures – Reusable test data.
 
-🛡 Mocks – Aislamiento de servicios externos y dependencias.
+🛡 Mocks – Isolation of external services and dependencies.
 
-🧪 Tests – Consumen únicamente fixtures y mocks, asegurando aislamiento total.
+🧪 Tests – Consume only fixtures and mocks, ensuring full isolation.
 
+🎯 Professionalism
 
-🎯 Profesionalismo
+✅ Isolated and reliable tests, following enterprise best practices.
 
-✅ Tests aislados y confiables, siguiendo buenas prácticas enterprise.
+🏗 Modular and scalable architecture, ready for multiple apps and teams.
 
-🏗 Arquitectura modular y escalable, lista para múltiples apps y equipos.
-
-👨‍💻 Demuestra capacidad de liderazgo técnico y estandarización de procesos de testing.
+👨‍💻 Demonstrates technical leadership and standardized testing processes.
