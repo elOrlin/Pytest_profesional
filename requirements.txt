@@ -1,0 +1,8 @@
+Django>=5.2
+djangorestframework
+pytest
+pytest-django
+factory-boy
+Faker
+ddf
+pytest-mock
