@@ -29,6 +29,7 @@ Faker → FactoryBoy → Fixtures → Mocks → Tests
 
 👥 Preparado para equipos y proyectos complejos.
 
+```text
 pytest_profesional/                 <- Root del proyecto
 ├── .venv/                          <- Entorno virtual
 ├── pytest_profesional/
@@ -36,7 +37,6 @@ pytest_profesional/                 <- Root del proyecto
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-│
 ├── apps/
 │   ├── usuario/
 │   │   ├── __init__.py
@@ -45,7 +45,6 @@ pytest_profesional/                 <- Root del proyecto
 │   │   ├── serializers.py        <- UsuarioSerializer
 │   │   ├── views.py              <- Vistas CRUD de Usuario
 │   │   └── urls.py
-│   │
 │   ├── libro/
 │   │   ├── __init__.py
 │   │   ├── models.py             <- Modelo Libro
@@ -53,7 +52,6 @@ pytest_profesional/                 <- Root del proyecto
 │   │   ├── serializers.py        <- LibroSerializer
 │   │   ├── views.py              <- Vistas CRUD de Libro
 │   │   └── urls.py
-│   │
 │   └── biblioteca/
 │       ├── __init__.py
 │       ├── models.py             <- Modelo Biblioteca
@@ -61,34 +59,28 @@ pytest_profesional/                 <- Root del proyecto
 │       ├── serializers.py        <- BibliotecaSerializer
 │       ├── views.py              <- Vistas CRUD Biblioteca
 │       └── urls.py
-│
 ├── tests/
 │   ├── conftest.py               <- Fixtures globales, Faker, FactoryBoy
 │   ├── factories/
 │   │   ├── usuario_factory.py    <- FactoryUsuario
 │   │   ├── libro_factory.py      <- FactoryLibro
 │   │   └── biblioteca_factory.py <- FactoryBiblioteca
-│   │
 │   ├── fixtures/
 │   │   ├── usuario_fixtures.py
 │   │   ├── libro_fixtures.py
 │   │   └── biblioteca_fixtures.py
-│   │
 │   ├── test_apps/
 │   │   ├── test_usuario.py
 │   │   ├── test_libro.py
 │   │   └── test_biblioteca.py
-│   │
 │   ├── test_serializers/
 │   │   ├── test_usuario_serializer.py
 │   │   ├── test_libro_serializer.py
 │   │   └── test_biblioteca_serializer.py
-│   │
 │   └── test_views/
 │       ├── test_usuario_view.py
 │       ├── test_libro_view.py
 │       └── test_biblioteca_view.py
-│
 ├── manage.py
 └── requirements.txt
 
