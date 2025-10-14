@@ -29,18 +29,66 @@ Faker → FactoryBoy → Fixtures → Mocks → Tests
 
 👥 Preparado para equipos y proyectos complejos.
 
-🗂 Estructura del proyecto
-pytest_profesional/
-├── .venv/                   # Entorno virtual
-├── pytest_profesional/       # Configuración Django
-├── apps/                     # Aplicaciones
+pytest_profesional/                 <- Root del proyecto
+├── .venv/                          <- Entorno virtual
+├── pytest_profesional/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── apps/
+│   ├── usuario/
+│   │   ├── __init__.py
+│   │   ├── models.py             <- Modelo Usuario
+│   │   ├── context_manager.py    <- UsuarioContextManager
+│   │   ├── serializers.py        <- UsuarioSerializer
+│   │   ├── views.py              <- Vistas CRUD de Usuario
+│   │   └── urls.py
+│   │
+│   ├── libro/
+│   │   ├── __init__.py
+│   │   ├── models.py             <- Modelo Libro
+│   │   ├── context_manager.py    <- LibroContextManager
+│   │   ├── serializers.py        <- LibroSerializer
+│   │   ├── views.py              <- Vistas CRUD de Libro
+│   │   └── urls.py
+│   │
+│   └── biblioteca/
+│       ├── __init__.py
+│       ├── models.py             <- Modelo Biblioteca
+│       ├── context_manager.py    <- BibliotecaContextManager
+│       ├── serializers.py        <- BibliotecaSerializer
+│       ├── views.py              <- Vistas CRUD Biblioteca
+│       └── urls.py
+│
 ├── tests/
-│   ├── conftest.py           # Fixtures globales
-│   ├── factories/            # FactoryBoy
-│   ├── fixtures/             # Fixtures personalizados
+│   ├── conftest.py               <- Fixtures globales, Faker, FactoryBoy
+│   ├── factories/
+│   │   ├── usuario_factory.py    <- FactoryUsuario
+│   │   ├── libro_factory.py      <- FactoryLibro
+│   │   └── biblioteca_factory.py <- FactoryBiblioteca
+│   │
+│   ├── fixtures/
+│   │   ├── usuario_fixtures.py
+│   │   ├── libro_fixtures.py
+│   │   └── biblioteca_fixtures.py
+│   │
 │   ├── test_apps/
+│   │   ├── test_usuario.py
+│   │   ├── test_libro.py
+│   │   └── test_biblioteca.py
+│   │
 │   ├── test_serializers/
+│   │   ├── test_usuario_serializer.py
+│   │   ├── test_libro_serializer.py
+│   │   └── test_biblioteca_serializer.py
+│   │
 │   └── test_views/
+│       ├── test_usuario_view.py
+│       ├── test_libro_view.py
+│       └── test_biblioteca_view.py
+│
 ├── manage.py
 └── requirements.txt
 
